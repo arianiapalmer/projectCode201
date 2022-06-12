@@ -6,7 +6,7 @@ console.log("users name is " + firstName);
 
 alert("Hey " + firstName + "!");
 
-// gettinging to know the user
+// getting to know the user
 
 let age = prompt("How old are you?");{
 
@@ -51,48 +51,64 @@ let sleep = prompt ("what time do you usually sleep?");{
 
 }
 
-// user gets to know me, my yes or no questions
+// user gets to know me, my yes or no questions. 
+
+
+
+// function running through the yes or no questions
 
 function YorN(){
-
+  
   let questions = [
+
+    'Do I love anime?',
+    'Am I a Sagittarius?',
     'Am I over 25?',
     'Do I have dogs?',
     'Was I born in Ohio?',
-    'Do I love anime?',
-    'Am I a Sagittarius?',
-  ]
-  prompt(questions);
-    questions[1] = false;
-    questions[2] = false;
-    questions[3] = false;
-    questions[4] = confirm;
-    questions[5] = confirm;
-    for (let questions = 0; questions < questions.length; questions++){
+    
+  ];
 
-    if(questions = false)
-    alert ('You just won brownie points!');
-    else {
-      if (confirm)
-      alert ('Wow, so am I invisible to you?');
-    }
+// for loop running through questions in array
+
+  for ( let i = 0; i < questions.length; i++){
+
+// asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
+
+    confirm(questions[i]);
+
+    if (questions [ 0, 1]) {
+      console.log('user answered correctly')
+      alert ('omg you know me so well');
+    } 
+      else if (questions[2.3,4]){
+        console.log('user answered correctly')
+        alert ('no dude')
+      }
+    
+    // alert(questions[2,3,4])
+    // prompt(questions);{
+
+    //   if(questions = true ){
+
+    //     console.log('user answered correctly');
+
+    //     confirm(questions);
+        
+    //     alert('You just won brownie points!');
+    //   }
+      
+    //     else if (questions = false){
+    //       console.log('user did not answer correctly');
+    //       alert('Wow, so am I invisible to you?');
+
+    //     }
+    // }
+    questions++
+
   }
 
-  // yes = Boolean(false);
-  // no = Boolean(true);\
-
-  // if (ariAge) = false; 
-  // alert 
-
-  // if ariPet
-  // if ariBorn
-  // if ariLuv
-  // if ariSag
-  
 }
-
-
-
 
 YorN();
 
