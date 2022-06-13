@@ -25,10 +25,11 @@ let live = prompt("Where do you live?");{
 }
 
 let time = prompt("What time zone do you live in?");{
+  var ariTime = ('eastern');
 
     console.log("the user's time zone is " + time)
 
-    if(time == "eastern"){
+    if(time.toLocaleLowerCase() === ariTime.toLocaleLowerCase()){
 
         alert ("Hey! Same here!");
 
@@ -37,7 +38,7 @@ let time = prompt("What time zone do you live in?");{
        else{
           console.log('user does not live in the same time zone as ari')
 
-          alert("I don't live in " + time + " I wonder what our time difference is");
+          alert("I don't live in " + time + ". I wonder what our time difference is");
 
         }
 
@@ -47,7 +48,7 @@ let sleep = prompt ("what time do you usually sleep?");{
 
     console.log('the user sleeps at ' + sleep)
 
-  alert (sleep + " Well I hope you at least get a good nights sleep");
+  alert (sleep + "? Well I hope you at least get a good nights sleep");
 
 }
 
@@ -69,42 +70,25 @@ function YorN(){
     
   ];
 
-// for loop running through questions in array
+
+  // for loop running through questions in array
 
   for ( let i = 0; i < questions.length; i++){
 
-// asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
-    // alert(questions[i])
-    alert(confirm(questions[0,1]));
-    alert(confirm(questions[2,3,4]));
+    let questions = true
+    confirm(alert(questions[i]));
+     // asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
 
-    if (questions [ 0, 1]) {
+    if (questions.length <= 3) {
+      
       console.log('user answered correctly')
       alert ('omg you know me so well');
     } 
-      else if (questions[2.3,4]){
-        console.log('user answered correctly')
-        alert ('no dude')
+      else if (questions[i]){
+        console.log('user answered correctly');
+        alert ('no dude');
       }
-    
-    // alert(questions[2,3,4])
-    // prompt(questions);{
 
-    //   if(questions = true ){
-
-    //     console.log('user answered correctly');
-
-    //     confirm(questions);
-        
-    //     alert('You just won brownie points!');
-    //   }
-      
-    //     else if (questions = false){
-    //       console.log('user did not answer correctly');
-    //       alert('Wow, so am I invisible to you?');
-
-    //     }
-    // }
     questions++
 
   }
@@ -113,5 +97,5 @@ function YorN(){
 
 YorN();
 
-//document.write("Hi " + firstName + "you are " + age + ", you live in " + live + "operating on " + time + " but you sleep at " + sleep + " your time. Glad to have you in class :\)");
+document.write("Hi " + firstName + "you are " + age + ", you live in " + live + "operating on " + time + " but you sleep at " + sleep + " your time. Glad to have you in class");
 
