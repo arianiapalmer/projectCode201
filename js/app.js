@@ -58,43 +58,82 @@ let sleep = prompt ("what time do you usually sleep?");{
 
 // function running through the yes or no questions
 
-function YorN(){
+// function YorN(){
   
-  let questions = [
+//   let questions = [
 
-    'Do I love anime?',
-    'Am I a Sagittarius?',
-    'Am I over 25?',
-    'Do I have dogs?',
-    'Was I born in Ohio?',
+    // 'Do I love anime?',
+    // 'Am I a Sagittarius?',
+    // 'Am I over 25?',
+    // 'Do I have dogs?',
+    // 'Was I born in Ohio?',
     
-  ];
+//   ];
 
 
-  // for loop running through questions in array
+//   // for loop running through questions in array
 
-  for ( let i = 0; i < questions.length; i++){
+//   for ( let i = 0; i < questions.length; i++){
 
-    confirm(alert(questions[i]));
-     // asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
+//     confirm(alert(questions[i]));
+//      // asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
 
-    if (questions.length <= 3) {
+//     if (questions.length <= 3) {
       
-      console.log('user answered correctly')
-      alert ('omg you know me so well');
-    } 
-      else if (questions[i]){
-        console.log('user answered correctly');
-        alert ('no dude');
+//       console.log('user answered correctly')
+//       alert ('omg you know me so well');
+//     } 
+//       else if (questions[i]){
+//         console.log('user answered correctly');
+//         alert ('no dude');
+//       }
+
+//     questions++
+
+//   }
+
+// }
+
+// YorN();
+
+
+function yesORno(){
+
+  let wrong = true;
+
+  while(wrong){
+
+    const questions = [
+
+      'Do I love anime?',
+      'Am I a Sagittarius?',
+      'Am I over 25?',
+      'Do I have dogs?',
+      'Was I born in Ohio?',
+      
+    ];
+    
+    for(i=0, i < questions.length, i++ )
+
+    prompt(questions[0]){
+      
+      if (questions[0,1] == 'yes'.toLocaleLowerCase){
+        alert('Wow you know me so well');
+        correct = false;
       }
-
-    questions++
-
+      else if (wrong){
+        alert("Wrong!");
+      }
+    }
+    questions ++;
+    return yesORno;
   }
 
 }
 
-YorN();
+yesORno;
 
-document.write("Hi " + firstName + "you are " + age + ", you live in " + live + "operating on " + time + " but you sleep at " + sleep + " your time. Glad to have you in class");
+
+
+document.write("Hi " + firstName + " you are " + age + ", you live in " + live + " operating on " + time + " but you sleep at " + sleep + " your time. Glad to have you in class!");
 
