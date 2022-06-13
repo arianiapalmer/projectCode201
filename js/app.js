@@ -75,7 +75,6 @@ function YorN(){
 
   for ( let i = 0; i < questions.length; i++){
 
-    let questions = true
     confirm(alert(questions[i]));
      // asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
 
