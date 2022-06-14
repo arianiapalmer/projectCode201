@@ -1,4 +1,4 @@
-// 'use strict'
+'use strict'
 // // user welcome message
 // let firstName = prompt("Hey! What's your name?");
 // console.log("users name is " + firstName);
@@ -93,39 +93,34 @@
 // guessing game function
 function guessGame() {
 
-  let allowedAttempts = 10;
-  let number = 4;
+  let allowedAttempts = 4;
+  let correctGuess = 6;
   let userAttempts = 0;
-  console.log('user guessed ' + userGuess);
 
-  while (allowedAttempts < userAttempts) {
 
-    let userGuess = prompt('Guess a number 1 - 100');
-    userAttempts++;
+  while (userAttempts < allowedAttempts) {
 
-    for (i = 0, i < allowedAttempts, i++) {
+    let userGuess = prompt('Guess a number 1 - 10');
 
-      if (userGuess == number) {
-        alert('You got it kid!');
-      }
-      else if (userGuess < number) {
-        alert('Nope, too low! Guess again!');
-        prompt(userGuess);
-      }
-      else if (userGuess > number) {
-        alert('Nope, too high! Guess again');
-        prompt(userGuess);
-        break;
-      }
-      console.log('user guessed ' + userGuess);
-
-      alert('You have ' + (allowedAttempts - userAttempts) + ' left');
-      console.log('user has ' + (allowedAttempts - userAttempts) + ' left');
-
+    if (userGuess == correctGuess) {
+      alert('You got it kid!');
+      break;
+    }
+    else if (userGuess < correctGuess) {
+      alert('Nope, too low! Guess again!');
+      userAttempts++;
+    }
+    else if (userGuess > correctGuess) {
+      alert('Nope, too high! Guess again');
+      userAttempts++;
     }
 
-  }
+    console.log('user guessed ' + userGuess);
 
+    alert('You have ' + (allowedAttempts - userAttempts) + ' guesses left');
+    console.log('user has ' + (allowedAttempts - userAttempts) + ' guesses left');
+
+  }
 
 }
 guessGame();
