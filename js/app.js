@@ -5,36 +5,35 @@ console.log("users name is " + firstName);
 alert("Hey " + firstName + "!");
 
 // getting to know the user
-
-let age = prompt("How old are you?");
+function nosyApp() {
+  let age = prompt("How old are you?");
   console.log("user is " + age);
   alert("WOW " + age + " you're really getting up there huh");
 
-let live = prompt("Where do you live?"); 
+  let live = prompt("Where do you live?");
   console.log('user lives in ' + live);
   alert(live + "? Sounds nice.");
 
 
-let time = prompt("What time zone do you live in?"); 
-var ariTime = ('eastern');
-console.log("the user's time zone is " + time);
+  let time = prompt("What time zone do you live in?");
+  var ariTime = ('eastern');
+  console.log("the user's time zone is " + time);
 
-if (time.toLowerCase() === ariTime.toLowerCase()) {
-  alert("Hey! Same here!");
-}
-else {
-  console.log('user does not live in the same time zone as ari');
-  alert("I don't live in " + time + ". I wonder what our time difference is");
+  if (time.toLowerCase() === ariTime.toLowerCase()) {
+    alert("Hey! Same here!");
+  }
+  else {
+    console.log('user does not live in the same time zone as ari');
+    alert("I don't live in " + time + ". I wonder what our time difference is");
 
-}
+  }
 
-
-
-let sleep = prompt("what time do you usually sleep?");
+  let sleep = prompt("what time do you usually sleep?");
   console.log('the user sleeps at ' + sleep);
   alert(sleep + "? Well I hope you at least get a good nights sleep");
 
-
+}
+nosyApp();
 // user gets to know me, my yes or no questions. 
 // function running through the yes or no questions
 
@@ -92,27 +91,27 @@ YorN();
 
 
 // guessing game function
-// function guessGame(){
+function guessGame() {
 
-//   let allowedAttempts = 4;
-//   let number = 24;
-//   let userGuess = prompt ('Guess a number 1 - 100');
+  let allowedAttempts = 4;
+  let number = 24;
+  let userGuess = prompt('Guess a number 1 - 100');
 
-//   while(userGuess < allowedAttempts){
+  while (userGuess < allowedAttempts) {
 
-//     if (userGuess == number){
-//       alert('You got it kid!');
-//     }
-//     else if (userGuess < number) {
-//       alert('Nope, too low! Guess again!');
-//     }
-//     else if (userGuess > number){
-//       alert('Nope, too high! Guess again');
-//     }
-//   }
+    if (userGuess == number) {
+      alert('You got it kid!');
+    }
+    else if (userGuess < number) {
+      alert('Nope, too low! Guess again!');
+    }
+    else if (userGuess > number) {
+      alert('Nope, too high! Guess again');
+    }
+  }
 
-// }
-// guessGame();
+}
+guessGame();
 
 
 document.write("Hi " + firstName + " you are " + age + ", you live in " + live + " operating on " + time + " but you sleep at " + sleep + " your time. Glad to have you in class!");
