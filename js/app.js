@@ -58,80 +58,70 @@ let sleep = prompt ("what time do you usually sleep?");{
 
 // function running through the yes or no questions
 
-// function YorN(){
+const questions = [
+
+  'Do I love anime?',
+  'Am I a Sagittarius?',
+  'Am I over 25?',
+  'Do I have dogs?',
+  'Was I born in Ohio?',
   
-//   let questions = [
-
-    // 'Do I love anime?',
-    // 'Am I a Sagittarius?',
-    // 'Am I over 25?',
-    // 'Do I have dogs?',
-    // 'Was I born in Ohio?',
-    
-//   ];
+];
 
 
-//   // for loop running through questions in array
+function YorN(){
+  
 
-//   for ( let i = 0; i < questions.length; i++){
 
-//     confirm(alert(questions[i]));
-//      // asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
+   // for loop running through questions in array
 
-//     if (questions.length <= 3) {
+  for ( let i = 0; i < questions.length; i++){
+
+    alert(confirm(questions[i]));
+
+     // asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
+
+    if (questions.length <= 3) {
       
-//       console.log('user answered correctly')
-//       alert ('omg you know me so well');
-//     } 
-//       else if (questions[i]){
-//         console.log('user answered correctly');
-//         alert ('no dude');
-//       }
-
-//     questions++
-
-//   }
-
-// }
-
-// YorN();
-
-
-function yesORno(){
-
-  let wrong = true;
-
-  while(wrong){
-
-    const questions = [
-
-      'Do I love anime?',
-      'Am I a Sagittarius?',
-      'Am I over 25?',
-      'Do I have dogs?',
-      'Was I born in Ohio?',
-      
-    ];
-    
-    for(i=0, i < questions.length, i++ )
-
-    prompt(questions[0]){
-      
-      if (questions[0,1] == 'yes'.toLocaleLowerCase){
-        alert('Wow you know me so well');
-        correct = false;
+      console.log('user answered correctly')
+      alert ('omg you know me so well');
+    } 
+      else if (questions[i]){
+        console.log('user answered correctly');
+        alert ('no dude');
       }
-      else if (wrong){
-        alert("Wrong!");
-      }
-    }
-    questions ++;
-    return yesORno;
+
+    questions++
+
   }
 
 }
 
-yesORno;
+YorN(questions);
+
+
+// function yesORno(){
+
+//   let wrong = true;
+
+//   while(wrong){
+
+//     let q1 = prompt('Do I love anime?');
+
+//     if (q1 == 'yes'.toLocaleLowerCase){
+//         console.log('congrats you got that right');
+//         alert('Wow you know me so well');
+//         wrong = false;
+//     }
+//     else{
+//       alert("Wrong!");
+//     }
+//   }
+// }
+
+
+
+// yesORno;
 
 
 
