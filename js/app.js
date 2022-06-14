@@ -18,7 +18,7 @@ let live = prompt("Where do you live?");{
 
 let time = prompt("What time zone do you live in?");{
   var ariTime = ('eastern');
-    console.log("the user's time zone is " + time);
+  console.log("the user's time zone is " + time);
 
     if(time.toLocaleLowerCase() === ariTime.toLocaleLowerCase()){
         alert ("Hey! Same here!");
@@ -32,33 +32,25 @@ let time = prompt("What time zone do you live in?");{
 }
 
 let sleep = prompt ("what time do you usually sleep?");{
-
-    console.log('the user sleeps at ' + sleep)
-
+    console.log('the user sleeps at ' + sleep);
   alert (sleep + "? Well I hope you at least get a good nights sleep");
-
 }
 
 // user gets to know me, my yes or no questions. 
-
-
-
 // function running through the yes or no questions
-
-const questions = [
-
-  'Do I love anime?',
-  'Am I a Sagittarius?',
-  'Am I over 25?',
-  'Do I have dogs?',
-  'Was I born in Ohio?',
-  
-];
-
 
 function YorN(){
   
+  const questions = [
 
+    'Do I love anime?',
+    'Am I a Sagittarius?',
+    'Am I over 25?',
+    'Do I have dogs?',
+    'Was I born in Ohio?',
+    
+  ];
+  
 
    // for loop running through questions in array
 
