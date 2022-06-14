@@ -81,23 +81,44 @@ function YorN(){
 
      // asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
 
-    if (questions.length <= 3) {
+    if (questions.length < questions[3]) {
       
       console.log('user answered correctly')
       alert ('omg you know me so well');
     } 
-      else if (questions[i]){
-        console.log('user answered correctly');
-        alert ('no dude');
-      }
-
-    questions++
-
+    else{
+      console.log('user answered incorrectly');
+      alert ('no dude');
+    }
   }
 
 }
 
-YorN(questions);
+YorN(questions++);
+
+
+
+function guessGame(){
+
+  let allowedAttempts = 4;
+  let number = 24;
+  let userGuess = prompt ('Guess a number 1 - 100');
+
+  while(userGuess < allowedAttempts){
+
+    if (userGuess == number){
+      alert('You got it kid!');
+    }
+    else if (userGuess < number) {
+      alert('Nope, too low! Guess again!');
+    }
+    else if (userGuess > number){
+      alert('Nope, too high! Guess again');
+    }
+  }
+
+}
+guessGame();
 
 
 // function yesORno(){
