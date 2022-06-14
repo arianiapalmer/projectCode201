@@ -6,41 +6,40 @@ alert("Hey " + firstName + "!");
 
 // getting to know the user
 
-let age = prompt("How old are you?");{
-    console.log("user is " + age);
-    alert("WOW " + age + " you're really getting up there huh");
+let age = prompt("How old are you?");
+  console.log("user is " + age);
+  alert("WOW " + age + " you're really getting up there huh");
+
+let live = prompt("Where do you live?"); 
+  console.log('user lives in ' + live);
+  alert(live + "? Sounds nice.");
+
+
+let time = prompt("What time zone do you live in?"); 
+var ariTime = ('eastern');
+console.log("the user's time zone is " + time);
+
+if (time.toLowerCase() === ariTime.toLowerCase()) {
+  alert("Hey! Same here!");
 }
-
-let live = prompt("Where do you live?");{
-    console.log('user lives in ' + live);
-    alert(live + "? Sounds nice.");
-  }
-
-let time = prompt("What time zone do you live in?");{
-  var ariTime = ('eastern');
-  console.log("the user's time zone is " + time);
-
-    if(time.toLocaleLowerCase() === ariTime.toLocaleLowerCase()){
-        alert ("Hey! Same here!");
-       }
-       else{
-          console.log('user does not live in the same time zone as ari');
-          alert("I don't live in " + time + ". I wonder what our time difference is");
-
-        }
+else {
+  console.log('user does not live in the same time zone as ari');
+  alert("I don't live in " + time + ". I wonder what our time difference is");
 
 }
 
-let sleep = prompt ("what time do you usually sleep?");{
-    console.log('the user sleeps at ' + sleep);
-  alert (sleep + "? Well I hope you at least get a good nights sleep");
-}
+
+
+let sleep = prompt("what time do you usually sleep?");
+  console.log('the user sleeps at ' + sleep);
+  alert(sleep + "? Well I hope you at least get a good nights sleep");
+
 
 // user gets to know me, my yes or no questions. 
 // function running through the yes or no questions
 
-function YorN(){
-  
+function YorN() {
+
   const questions = [
 
     'Do I love anime?',
@@ -48,81 +47,72 @@ function YorN(){
     'Am I over 25?',
     'Do I have dogs?',
     'Was I born in Ohio?',
-    
+
   ];
-  
 
-   // for loop running through questions in array
 
-  for ( let i = 0; i < questions.length; i++){
+  // for loop running through questions in array
 
-    alert(confirm(questions[i]));
+  for (let i = 0; i < questions.length; i++) {
 
-     // asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
+    let response = prompt(questions[i]);
+    console.log(response);
+    // asking questions through an alert, which if questions 0,1, it is then confirmed and user is given a response
 
-    if (questions.length < questions[3]) {
-      
-      console.log('user answered correctly')
-      alert ('omg you know me so well');
-    } 
-    else{
-      console.log('user answered incorrectly');
-      alert ('no dude');
+    if (i < 2) {
+      if (response.toLowerCase() == "yes") {
+
+        console.log('user answered correctly');
+        alert('omg you know me so well');
+
+      }
+      else {
+        console.log('user answered incorrectly');
+        alert('no dude');
+      }
     }
+    else {
+      if (response.toLowerCase() == "no") {
+
+        console.log('user answered correctly');
+        alert('omg you know me so well');
+
+      }
+      else {
+        console.log('user answered incorrectly');
+        alert('no dude');
+      }
+    }
+
   }
 
 }
 
-YorN(questions++);
+YorN();
 
 
 // guessing game function
-function guessGame(){
-  
-  let allowedAttempts = 4;
-  let number = 24;
-  let userGuess = prompt ('Guess a number 1 - 100');
+// function guessGame(){
 
-  while(userGuess < allowedAttempts){
+//   let allowedAttempts = 4;
+//   let number = 24;
+//   let userGuess = prompt ('Guess a number 1 - 100');
 
-    if (userGuess == number){
-      alert('You got it kid!');
-    }
-    else if (userGuess < number) {
-      alert('Nope, too low! Guess again!');
-    }
-    else if (userGuess > number){
-      alert('Nope, too high! Guess again');
-    }
-  }
+//   while(userGuess < allowedAttempts){
 
-}
-guessGame();
-
-
-// function yesORno(){
-
-//   let wrong = true;
-
-//   while(wrong){
-
-//     let q1 = prompt('Do I love anime?');
-
-//     if (q1 == 'yes'.toLocaleLowerCase){
-//         console.log('congrats you got that right');
-//         alert('Wow you know me so well');
-//         wrong = false;
+//     if (userGuess == number){
+//       alert('You got it kid!');
 //     }
-//     else{
-//       alert("Wrong!");
+//     else if (userGuess < number) {
+//       alert('Nope, too low! Guess again!');
+//     }
+//     else if (userGuess > number){
+//       alert('Nope, too high! Guess again');
 //     }
 //   }
+
 // }
-
-
-
-// yesORno;
-
+// guessGame();
 
 
 document.write("Hi " + firstName + " you are " + age + ", you live in " + live + " operating on " + time + " but you sleep at " + sleep + " your time. Glad to have you in class!");
