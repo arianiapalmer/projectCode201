@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 // // user welcome message
 // let firstName = prompt("Hey! What's your name?");
 // console.log("users name is " + firstName);
@@ -90,41 +90,79 @@
 // YorN();
 
 
-// guessing game function
-function guessGame() {
+// // guessing game function
 
-  let allowedAttempts = 4;
-  let correctGuess = 6;
-  let userAttempts = 0;
+// function numberGame() {
+
+//   let allowedAttempts = 4;
+//   let correctGuess = 6;
+//   let userAttempts = 0;
 
 
-  while (userAttempts < allowedAttempts) {
+//   while (userAttempts < allowedAttempts) {
 
-    let userGuess = prompt('Guess a number 1 - 10');
+//     let userGuess = prompt('Guess a number 1 - 10');
 
-    if (userGuess == correctGuess) {
-      alert('You got it kid!');
-      break;
+//     if (userGuess == correctGuess) {
+//       alert('You got it kid!');
+//       break;
+//     }
+//     else if (userGuess < correctGuess) {
+//       alert('Nope, too low! Guess again!');
+//       userAttempts++;
+//     }
+//     else if (userGuess > correctGuess) {
+//       alert('Nope, too high! Guess again');
+//       userAttempts++;
+//     }
+
+//     console.log('user guessed ' + userGuess);
+
+//     alert('You have ' + (allowedAttempts - userAttempts) + ' guesses left');
+//     console.log('user has ' + (allowedAttempts - userAttempts) + ' guesses left');
+
+//   }
+
+// }
+// numberGame();
+
+
+function trivia() {
+
+  let allowedTriviaAttempts = 6;
+  let userTriviaAttempts = 0;
+
+  let favFood = [
+    'cajun island',
+    'arepittas',
+    'cajun boil bar',
+    'fork in nigeria',
+    'funny greek',
+    'wingstop',
+  ]
+
+  while (userTriviaAttempts < allowedTriviaAttempts) {
+    let foodGuess = prompt('What is one of my favorite food spots?');
+    console.log('foodGuess is ', foodGuess);
+
+    for (let i = 0; i < favFood.length; i++) {
+
+      if (favFood.includes(foodGuess) == true) {
+        
+        console.log('i is ', i);
+        console.log('foodguess is : ', foodGuess);
+        console.log('favFood[i] is ', favFood[i]);
+
+        alert('Wow you know me so well');
+        // return foodGuess;        
+        break;
+      } else {
+        alert('Nope try again');
+        console.log('user did not answer correctly');
+        userTriviaAttempts++
+      }
+    userTriviaAttempts = 6;
     }
-    else if (userGuess < correctGuess) {
-      alert('Nope, too low! Guess again!');
-      userAttempts++;
-    }
-    else if (userGuess > correctGuess) {
-      alert('Nope, too high! Guess again');
-      userAttempts++;
-    }
-
-    console.log('user guessed ' + userGuess);
-
-    alert('You have ' + (allowedAttempts - userAttempts) + ' guesses left');
-    console.log('user has ' + (allowedAttempts - userAttempts) + ' guesses left');
-
   }
-
 }
-guessGame();
-
-
-
-
+trivia();
