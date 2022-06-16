@@ -1,7 +1,6 @@
 'use strict'
 // user welcome message
 let firstName = prompt("Hey! What's your name?");
-console.log("users name is " + firstName);
 alert("Hey " + firstName + "!");
 
 let userScore = 0;
@@ -12,29 +11,23 @@ let failingScore = 0;
 // getting to know the user
 function nosyApp() {
   let age = prompt("How old are you?");
-  console.log("user is " + age);
   alert("WOW " + age + " you're really getting up there huh");
 
   let live = prompt("Where do you live?");
-  console.log('user lives in ' + live);
   alert(live + "? Sounds nice.");
 
 
   let time = prompt("What time zone do you live in?");
   var ariTime = ('eastern');
-  console.log("the user's time zone is " + time);
 
   if (time.toLowerCase() === ariTime.toLowerCase() || time.toLowerCase() === 'eastern time zone') {
     alert("Hey! Same here!");
   }
   else {
-    console.log('user does not live in the same time zone as ari');
     alert("I don't live in " + time + ". I wonder what our time difference is");
-
   }
 
   let sleep = prompt("what time do you usually sleep?");
-  console.log('the user sleeps at ' + sleep);
   alert(sleep + "? Well I hope you at least get a good nights sleep");
   document.write("Hi " + firstName + " you are " + age + ", you live in " + live + " operating on " + time + " but you sleep at " + sleep + " your time. Glad to have you in class!");
 }
@@ -60,31 +53,22 @@ function YorN() {
   for (let i = 0; i < questions.length; i++) {
 
     let response = prompt(questions[i]);
-    console.log(response);
 
     if (i < 2) {
       if (response.toLowerCase() == "yes") {
-
-        console.log('user answered correctly');
         alert('omg you know me so well');
         userScore++
-
       }
       else {
-        console.log('user answered incorrectly');
         alert('no dude');
       }
     }
     else {
       if (response.toLowerCase() == "no") {
-
-        console.log('user answered correctly');
         alert('omg you know me so well');
         userScore++
-
       }
       else {
-        console.log('user answered incorrectly');
         alert('no dude');
       }
     }
@@ -122,12 +106,7 @@ function numberGame() {
       alert('Nope, too high! Guess again');
       userAttempts++;
     }
-
-    console.log('user guessed ' + userGuess);
-
     alert('You have ' + (allowedAttempts - userAttempts) + ' guesses left');
-    console.log('user has ' + (allowedAttempts - userAttempts) + ' guesses left');
-
   }
 
 }
@@ -157,13 +136,10 @@ function trivia() {
 
       if (favFood.includes(foodGuess) == true) {
         alert('Wow you know me so well, ' + foodGuess + ' is one of my favorite food spots. And it only took you ' + userTriviaAttempts + ' attempt.');
-        console.log('user answered correctly');
         userScore++
         return foodGuess;
       } else {
         alert('Nope try again, you have ' + guessesRemaining + ' guesses remaining.');
-        console.log('user did not answer correctly, user has ' + guessesRemaining + ' guesses remaining.');
-
         userTriviaAttempts++
         guessesRemaining--
 
